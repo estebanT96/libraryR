@@ -528,6 +528,7 @@ select {
   padding: 0 16px;
   width: 100%;
   max-width: 200px;
+  appearance: none;
 }
 
 .books__loading {
