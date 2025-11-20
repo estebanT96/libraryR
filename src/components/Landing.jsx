@@ -1,4 +1,4 @@
-import UndrawBooks from "../assets/Undraw_Books.svg"
+import UndrawBooks from "../assets/Undraw_Books.svg";
 
 function Landing() {
   return (

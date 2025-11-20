@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Books from "./pages/Books.jsx";
-
+import { books } from "./data.js";
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="books" element={<Books />} />
+            <Route path="books" element={<Books books={books} />} />
           </Routes>
           <Footer />
         </div>
