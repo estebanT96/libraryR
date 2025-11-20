@@ -4,7 +4,7 @@ import React from "react";
 export default function Book({ book }) {
   return (
     <div className="book">
-      <a href="">
+      <a href={`books/${book.id}`}>
         <figure className="img__wrapper">
           <img src={book.url} alt="" className="book__img" />
         </figure>

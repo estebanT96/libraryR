@@ -4,7 +4,6 @@ import Book from "../components/ui/Book.jsx";
 export default function Books({ books: initialBooks }) {
   const [books, setBooks] = useState(initialBooks);
   function filterBooks(filter) {
-    console.log(filter);
     if (filter === "LOW_TO_HIGH") {
       setBooks(
         books
@@ -15,8 +14,7 @@ export default function Books({ books: initialBooks }) {
               (b.salePrice || b.originalPrice)
           )
       );
-    } 
-    else if (filter === "HIGH_TO_LOW") {
+    } else if (filter === "HIGH_TO_LOW") {
       setBooks(
         books
           .slice()
@@ -26,13 +24,8 @@ export default function Books({ books: initialBooks }) {
               (a.salePrice || a.originalPrice)
           )
       );
-    }
-    else if (filter === "RATING"){
-      setBooks(
-        books
-        .slice()
-        .sort((a,b) => a.rating - b.rating)
-      )
+    } else if (filter === "RATING") {
+      setBooks(books.slice().sort((a, b) => a.rating - b.rating));
     }
   }
   return (
